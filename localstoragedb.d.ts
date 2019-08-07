@@ -100,3 +100,5 @@ export declare class localStorageDB {
 	 - query is either an object literal or a function. If query is not supplied, all rows are deleted
 	 */
 }
+
+export default localStorageDB;
