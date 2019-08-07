@@ -38,14 +38,14 @@ export declare class localStorageDB {
     serialize(): string; // Returns the entire database as serialized JSON
     tableExists(table: string): boolean; // Checks whether a table exists in the database
     tableFields(table: string): string[]; // Returns the list of fields of a table
-    createTable(table: string, fields: string[]); // Creates a table - fields is an array of string fieldnames. 'ID' is a reserved fieldname.
-    createTableWithData(table: string, rows: { [T: string]: any }[]);
+    createTable(table: string, fields: string[]): boolean; // Creates a table - fields is an array of string fieldnames. 'ID' is a reserved fieldname.
+    createTableWithData(table: string, rows: { [T: string]: any }[]): true;
 	/*
 	 Creates a table and populates it
 	 rows is an array of object literals where each object represents a record
 	 [{field1: val, field2: val}, {field1: val, field2: val}]
 	 */
-    alterTable(table: string, new_fields: string[] | string, default_values: DynamicFields | string);
+    alterTable(table: string, new_fields: string[] | string, default_values: DynamicFields | string): boolean;
 	/*
 	 Alter a table
 	 - new_fields can be a array of columns OR a string of single column.
