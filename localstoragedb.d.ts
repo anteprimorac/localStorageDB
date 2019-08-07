@@ -100,6 +100,6 @@ interface localStorageDB_queryParams {
     distinct?: string[]; // - distinct is an array of fields whose values have to be unique in the returned rows
 }
 
-declare module 'localStorageDB' {
+declare module 'localstoragedb' {
     export = localStorageDB;
 }
